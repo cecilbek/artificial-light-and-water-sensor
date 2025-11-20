@@ -6,16 +6,38 @@ RTC_DS1307.DateTime(
 11,
 30
 )
-let strip = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
-let soil_moisture = Environment.ReadSoilHumidity(AnalogPin.P2)
+let stripBasil = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+let soil_moistureBasil = Environment.ReadSoilHumidity(AnalogPin.P2)
+let stripPepperomia = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+let soil_moisturePepperomia = Environment.ReadSoilHumidity(AnalogPin.P2)
+let stripAloeVera = neopixel.create(DigitalPin.P1, 1, NeoPixelMode.RGB)
+let soil_moistureAloeVera = Environment.ReadSoilHumidity(AnalogPin.P2)
 basic.forever(function () {
-    if ((RTC_DS1307.getTime(RTC_DS1307.TimeType.HOUR) == 11) < (RTC_DS1307.getTime(RTC_DS1307.TimeType.HOUR) == 14)) {
-        strip.showColor(neopixel.colors(NeoPixelColors.Red))
-        if (soil_moisture < 10) {
+    if ((RTC_DS1307.getTime(RTC_DS1307.TimeType.HOUR) == 10) < (RTC_DS1307.getTime(RTC_DS1307.TimeType.HOUR) == 14)) {
+        stripBasil.showColor(neopixel.colors(NeoPixelColors.Red))
+        if (soil_moistureBasil < 10) {
             basic.pause(500)
-            strip.showColor(neopixel.colors(NeoPixelColors.Blue))
+            stripBasil.showColor(neopixel.colors(NeoPixelColors.Blue))
         }
     } else {
-        strip.showColor(neopixel.colors(NeoPixelColors.Black))
+        stripBasil.showColor(neopixel.colors(NeoPixelColors.Black))
+    }
+    if ((RTC_DS1307.getTime(RTC_DS1307.TimeType.HOUR) == 10) < (RTC_DS1307.getTime(RTC_DS1307.TimeType.HOUR) == 14)) {
+        stripPepperomia.showColor(neopixel.colors(NeoPixelColors.Red))
+        if (soil_moisturePepperomia < 10) {
+            basic.pause(500)
+            stripPepperomia.showColor(neopixel.colors(NeoPixelColors.Blue))
+        }
+    } else {
+        if ((RTC_DS1307.getTime(RTC_DS1307.TimeType.HOUR) == 10) < (RTC_DS1307.getTime(RTC_DS1307.TimeType.HOUR) == 14)) {
+            stripAloeVera.showColor(neopixel.colors(NeoPixelColors.Red))
+            if (soil_moistureAloeVera < 10) {
+                basic.pause(500)
+                stripAloeVera.showColor(neopixel.colors(NeoPixelColors.Blue))
+            }
+        } else {
+            stripAloeVera.showColor(neopixel.colors(NeoPixelColors.Black))
+        }
+        stripAloeVera.showColor(neopixel.colors(NeoPixelColors.Black))
     }
 })
