@@ -1,0 +1,208 @@
+{
+  "version": "1.1",
+  "units": {
+    "light_strength_default": "lux",
+    "temperature": "°C",
+    "humidity": "%",
+    "soil_moisture": "%",
+    "ph": "pH",
+    "ec": "mS/cm"
+  },
+  "plants": [
+    {
+      "id": "lemon_tree",
+      "common_name": "Lemon Tree",
+      "scientific_name": "Citrus limon",
+      "category": "fruit tree",
+      "exposure": "direct",
+      "light": {
+        "hours": 10,
+        "strength": {
+          "value": 30000,
+          "unit": "lux",
+          "tolerance_pct": 20
+        }
+      },
+      "thresholds": {
+        "temperature": {
+          "min": 15,
+          "max": 30
+        },
+        "humidity": {
+          "min": 40,
+          "max": 60
+        },
+        "soil_moisture_pct": {
+          "min": 40,
+          "max": 70
+        },
+        "ph": {
+          "min": 5.5,
+          "max": 6.5
+        },
+        "ec": {
+          "target": 1.8,
+          "low": 1.2,
+          "high": 2.4
+        }
+      },
+      "care_notes": "Evenly moist soil; allow top ~2 cm to dry. Strong light preferred."
+    },
+    {
+      "id": "aloe_vera",
+      "common_name": "Aloe Vera",
+      "scientific_name": "Aloe barbadensis miller",
+      "category": "succulent",
+      "exposure": "bright_indirect",
+      "light": {
+        "hours": 10,
+        "strength": {
+          "value": 18000,
+          "unit": "lux",
+          "tolerance_pct": 25
+        }
+      },
+      "thresholds": {
+        "temperature": {
+          "min": 13,
+          "max": 27
+        },
+        "humidity": {
+          "min": 30,
+          "max": 50
+        },
+        "soil_moisture_pct": {
+          "min": 10,
+          "max": 35
+        },
+        "ph": {
+          "min": 6.0,
+          "max": 8.0
+        },
+        "ec": {
+          "target": 1.2,
+          "low": 0.8,
+          "high": 1.6
+        }
+      },
+      "care_notes": "Let soil dry completely between waterings; protect from scorching midday sun."
+    },
+    {
+      "id": "flame_nettle",
+      "common_name": "Flame Nettle (Coleus)",
+      "scientific_name": "Solenostemon scutellarioides",
+      "category": "ornamental foliage",
+      "exposure": "indirect",
+      "light": {
+        "hours": 12,
+        "strength": {
+          "value": 12000,
+          "unit": "lux",
+          "tolerance_pct": 25
+        }
+      },
+      "thresholds": {
+        "temperature": {
+          "min": 18,
+          "max": 28
+        },
+        "humidity": {
+          "min": 50,
+          "max": 70
+        },
+        "soil_moisture_pct": {
+          "min": 45,
+          "max": 80
+        },
+        "ph": {
+          "min": 5.8,
+          "max": 6.5
+        },
+        "ec": {
+          "target": 1.5,
+          "low": 1.0,
+          "high": 2.0
+        }
+      },
+      "care_notes": "Keep evenly moist; foliage colors hold best in bright, indirect light."
+    },
+    {
+      "id": "peperomia_caperata",
+      "common_name": "Peperomia Caperata (Ripple Peperomia)",
+      "scientific_name": "Peperomia caperata",
+      "category": "ornamental foliage",
+      "exposure": "indirect",
+      "light": {
+        "hours": 12,
+        "strength": {
+          "value": 8000,
+          "unit": "lux",
+          "tolerance_pct": 30
+        }
+      },
+      "thresholds": {
+        "temperature": {
+          "min": 18,
+          "max": 27
+        },
+        "humidity": {
+          "min": 50,
+          "max": 70
+        },
+        "soil_moisture_pct": {
+          "min": 40,
+          "max": 70
+        },
+        "ph": {
+          "min": 6.0,
+          "max": 7.0
+        },
+        "ec": {
+          "target": 1.2,
+          "low": 0.8,
+          "high": 1.8
+        }
+      },
+      "care_notes": "Prefers bright but indirect light; allow topsoil to dry slightly between watering. Sensitive to overwatering and cold drafts."
+    },
+    {
+      "id": "basil_greek",
+      "common_name": "Greek Basil",
+      "scientific_name": "Ocimum basilicum var. minimum",
+      "category": "herb",
+      "exposure": "direct",
+      "light": {
+        "hours": 14,
+        "strength": {
+          "value": 20000,
+          "unit": "lux",
+          "tolerance_pct": 20
+        }
+      },
+      "thresholds": {
+        "temperature": {
+          "min": 20,
+          "max": 30
+        },
+        "humidity": {
+          "min": 40,
+          "max": 65
+        },
+        "soil_moisture_pct": {
+          "min": 45,
+          "max": 75
+        },
+        "ph": {
+          "min": 5.5,
+          "max": 6.5
+        },
+        "ec": {
+          "target": 1.8,
+          "low": 1.2,
+          "high": 2.4
+        }
+      },
+      "care_notes": "Requires strong light or full sun; keep soil evenly moist but well-drained. Pinch regularly to encourage bushy growth."
+    }
+  ]
+}
